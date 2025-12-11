@@ -5,48 +5,418 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bonos de Carbono – CO₂KUALTA</title>
     <link rel="stylesheet" href="estilos.css">
+
+    <!-- Estilos específicos de esta página -->
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background-color: #f5f7f4;
+            color: #123225;
+        }
+
+        header {
+            text-align: center;
+            padding: 2rem 1rem 1rem;
+        }
+
+        .logo-text {
+            font-weight: 800;
+            font-size: 1.6rem;
+            letter-spacing: 0.08em;
+            color: #0f5132;
+        }
+
+        .tagline {
+            margin-top: 0.25rem;
+            color: #356e4c;
+        }
+
+        .lang-switch {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            margin: 1rem 0 2rem;
+        }
+
+        .lang-btn {
+            border: 1px solid #c4d6c8;
+            background: #ffffff;
+            border-radius: 999px;
+            padding: 0.45rem 1.1rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+            color: #23613f;
+        }
+
+        .lang-btn.active {
+            background: #23613f;
+            color: #ffffff;
+            border-color: #23613f;
+        }
+
+        .contenido {
+            max-width: 960px;
+            margin: 0 auto 3rem;
+            background: #ffffff;
+            border-radius: 1.25rem;
+            padding: 2rem 1.5rem;
+            box-shadow: 0 14px 45px rgba(9, 53, 30, 0.06);
+        }
+
+        @media (min-width: 768px) {
+            .contenido {
+                padding: 2.5rem 3rem;
+            }
+        }
+
+        h2, h3 {
+            color: #18412e;
+        }
+
+        .grid-2 {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 2fr 1.4fr;
+                align-items: flex-start;
+            }
+        }
+
+        ul {
+            padding-left: 1.2rem;
+        }
+
+        ul li {
+            margin-bottom: 0.35rem;
+        }
+
+        .pago-section {
+            margin-top: 2rem;
+        }
+
+        .pago-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 640px) {
+            .pago-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        .pago-box {
+            border-radius: 1rem;
+            padding: 1.5rem 1.25rem;
+            background: #f3f8f4;
+            border: 1px solid #d5e7d7;
+        }
+
+        .pago-box h3 {
+            margin-top: 0;
+        }
+
+        .pago-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            background: #e8f5e9;
+            color: #25633f;
+            margin-bottom: 0.5rem;
+        }
+
+        .amount {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin: 0.35rem 0 0.75rem;
+        }
+
+        .boton-wompi {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.6rem 1.3rem;
+            border-radius: 999px;
+            background-color: #00C389;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .boton-wompi:hover {
+            background-color: #00a573;
+        }
+
+        .small {
+            font-size: 0.8rem;
+            color: #4b6b57;
+        }
+
+        .lang-block {
+            display: none;
+        }
+
+        .lang-block.active {
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #6b8572;
+            margin-bottom: 2rem;
+        }
+    </style>
 </head>
 
 <body>
 
 <header>
-    <h1>Proyecto de Bonos de Carbono – CO₂KUALTA</h1>
-    <p>Desde la raíz, tejemos el futuro del planeta.</p>
+    <div class="logo-text">CO₂KUALTA</div>
+    <p class="tagline">Desde la raíz, tejemos el futuro del planeta.</p>
+
+    <!-- Selector de idioma -->
+    <div class="lang-switch">
+        <button class="lang-btn active" data-lang="es">Español</button>
+        <button class="lang-btn" data-lang="en">English</button>
+    </div>
 </header>
 
-<section class="contenido">
-    <h2>Evaluación Técnica Inicial</h2>
-    <p>Incluye revisión predial, análisis preliminar de elegibilidad, proyección de bonos y viabilidad del proyecto.</p>
+<main class="contenido">
 
-    <h3>Valor de la evaluación</h3>
-    <p><strong>COP 497.000</strong></p>
+    <!-- BLOQUE EN ESPAÑOL -->
+    <section class="lang-block active" id="lang-es">
+        <h2>Evaluación Técnica Inicial para Bonos de Carbono</h2>
 
-    <!-- BOTÓN WOMPI -->
-    <div class="pago-box">
-        <h3>Pagar con Wompi</h3>
-        <a href="https://checkout.wompi.co/l/sVgCFX" class="boton-wompi" target="_blank">
-            Pagar con Wompi
-        </a>
-    </div>
+        <div class="grid-2">
+            <div>
+                <p>
+                    Esta evaluación es el primer paso para transformar tu predio en un proyecto
+                    de bonos de carbono rentable y certificado internacionalmente.
+                </p>
 
-    <!-- BOTÓN PAYPAL -->
-    <div class="pago-box">
-        <h3>Pagar con PayPal</h3>
+                <h3>¿Qué incluye?</h3>
+                <ul>
+                    <li>Revisión preliminar de la ubicación y características del predio.</li>
+                    <li>Análisis de elegibilidad según estándares de carbono.</li>
+                    <li>Estimación inicial del potencial de bonos y horizonte del proyecto.</li>
+                    <li>Modelo de alianza sugerido (porcentaje para el propietario y para CO₂KUALTA).</li>
+                    <li>Recomendaciones técnicas y ruta de siguiente paso.</li>
+                </ul>
 
-        <div>
-          <style>.pp-ZCK67D7C3TZ6L{text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.25rem;cursor:pointer;}</style>
-          <form action="https://www.paypal.com/ncp/payment/ZCK67D7C3TZ6L" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
-            <input class="pp-ZCK67D7C3TZ6L" type="submit" value="Comprar ahora" />
-            <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" />
-            <section style="font-size: 0.75rem;"> 
-                Con la tecnología de 
-                <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/>
-            </section>
-          </form>
+                <h3>¿Para quién es?</h3>
+                <ul>
+                    <li>Propietarios de fincas o bosques en Colombia (mínimo 50–100 ha según el caso).</li>
+                    <li>Familias o empresas que desean monetizar la conservación de su bosque.</li>
+                    <li>Aliados internacionales interesados en proyectos serios y estructurados.</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Resumen rápido</h3>
+                <ul>
+                    <li>Duración: 7 a 10 días hábiles.</li>
+                    <li>Entrega: informe ejecutivo + llamada de explicación.</li>
+                    <li>Formato: 100% virtual (podemos programar visita posterior si aplica).</li>
+                </ul>
+                <p class="small">
+                    El valor de la evaluación se descuenta del costo de estructuración si avanzamos con el 
+                    proyecto de bonos de carbono.
+                </p>
+            </div>
         </div>
-    </div>
 
-</section>
+        <!-- PAGOS -->
+        <section class="pago-section">
+            <h2>Confirma tu Evaluación</h2>
+
+            <div class="pago-grid">
+
+                <!-- COLOMBIA / COP / WOMPI -->
+                <div class="pago-box">
+                    <div class="pago-badge">Clientes en Colombia</div>
+                    <h3>Pago en pesos colombianos (COP)</h3>
+                    <p class="amount">COP 497.000</p>
+                    <p class="small">
+                        Ideal para propietarios de predios en Colombia que pagan desde cuentas bancarias o tarjetas locales.
+                    </p>
+
+                    <a href="https://checkout.wompi.co/l/sVgCFX" class="boton-wompi" target="_blank">
+                        Pagar con Wompi
+                    </a>
+
+                    <p class="small" style="margin-top:0.5rem;">
+                        Serás redirigido(a) al checkout seguro de Wompi. El comprobante llegará a tu correo.
+                    </p>
+                </div>
+
+                <!-- INTERNACIONAL / USD / PAYPAL -->
+                <div class="pago-box">
+                    <div class="pago-badge">Clientes internacionales</div>
+                    <h3>Pago en dólares (USD)</h3>
+                    <p class="amount">USD (equivalente configurado en PayPal)</p>
+                    <p class="small">
+                        Recomendado para propietarios o aliados que pagan desde Estados Unidos, Europa u otros países.
+                    </p>
+
+                    <!-- Botón de PayPal que creaste -->
+                    <div>
+                      <style>.pp-ZCK67D7C3TZ6L{text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.25rem;cursor:pointer;}</style>
+                      <form action="https://www.paypal.com/ncp/payment/ZCK67D7C3TZ6L" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
+                        <input class="pp-ZCK67D7C3TZ6L" type="submit" value="Comprar ahora" />
+                        <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" />
+                        <section style="font-size: 0.75rem;"> 
+                            Con la tecnología de 
+                            <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/>
+                        </section>
+                      </form>
+                    </div>
+
+                    <p class="small" style="margin-top:0.5rem;">
+                        El valor se procesará en USD. PayPal realiza la conversión de moneda según tu país y tarjeta.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+    </section>
+
+    <!-- BLOQUE EN INGLÉS -->
+    <section class="lang-block" id="lang-en">
+        <h2>Initial Technical Assessment – Carbon Credit Project</h2>
+
+        <div class="grid-2">
+            <div>
+                <p>
+                    This assessment is the first step to turn your land into a certified, profitable
+                    carbon credit project.
+                </p>
+
+                <h3>What’s included?</h3>
+                <ul>
+                    <li>Preliminary review of your land location and characteristics.</li>
+                    <li>Eligibility check according to carbon standards.</li>
+                    <li>Initial estimate of carbon credit potential and project timeframe.</li>
+                    <li>Suggested partnership model (revenue split between landowner and CO₂KUALTA).</li>
+                    <li>Technical recommendations and next steps roadmap.</li>
+                </ul>
+
+                <h3>Who is this for?</h3>
+                <ul>
+                    <li>Landowners in Colombia (usually 50–100+ ha, depending on the case).</li>
+                    <li>Families or companies who want to monetize forest conservation.</li>
+                    <li>International partners looking for serious, well-structured projects.</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>At a glance</h3>
+                <ul>
+                    <li>Timeline: 7–10 business days.</li>
+                    <li>Deliverable: executive report + online call to walk you through the results.</li>
+                    <li>Format: fully remote; on-site visit can be arranged later if required.</li>
+                </ul>
+                <p class="small">
+                    The assessment fee is discounted from the structuring cost if we move forward 
+                    with the full carbon project.
+                </p>
+            </div>
+        </div>
+
+        <!-- PAYMENTS (ENGLISH TEXT) -->
+        <section class="pago-section">
+            <h2>Confirm your Assessment</h2>
+
+            <div class="pago-grid">
+
+                <!-- COLOMBIA / COP / WOMPI -->
+                <div class="pago-box">
+                    <div class="pago-badge">Clients in Colombia</div>
+                    <h3>Payment in Colombian Pesos (COP)</h3>
+                    <p class="amount">COP 497,000</p>
+                    <p class="small">
+                        Recommended for landowners paying from Colombian banks or local cards.
+                    </p>
+
+                    <a href="https://checkout.wompi.co/l/sVgCFX" class="boton-wompi" target="_blank">
+                        Pay with Wompi
+                    </a>
+
+                    <p class="small" style="margin-top:0.5rem;">
+                        You will be redirected to Wompi’s secure checkout. The receipt will be sent to your email.
+                    </p>
+                </div>
+
+                <!-- INTERNATIONAL / USD / PAYPAL -->
+                <div class="pago-box">
+                    <div class="pago-badge">International clients</div>
+                    <h3>Payment in US Dollars (USD)</h3>
+                    <p class="amount">USD (as configured in PayPal)</p>
+                    <p class="small">
+                        Perfect for clients paying from the United States, Europe or any other country.
+                    </p>
+
+                    <!-- Same PayPal button -->
+                    <div>
+                      <style>.pp-ZCK67D7C3TZ6L{text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.25rem;cursor:pointer;}</style>
+                      <form action="https://www.paypal.com/ncp/payment/ZCK67D7C3TZ6L" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
+                        <input class="pp-ZCK67D7C3TZ6L" type="submit" value="Buy now" />
+                        <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" />
+                        <section style="font-size: 0.75rem;"> 
+                            Powered by 
+                            <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/>
+                        </section>
+                      </form>
+                    </div>
+
+                    <p class="small" style="margin-top:0.5rem;">
+                        Payment will be processed in USD. PayPal will handle any currency conversion.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+    </section>
+
+</main>
+
+<footer>
+    CO₂KUALTA &copy; <span id="year"></span>. Todos los derechos reservados.
+</footer>
+
+<!-- Script para cambio de idioma y año dinámico -->
+<script>
+    const langButtons = document.querySelectorAll('.lang-btn');
+    const blocks = {
+        es: document.getElementById('lang-es'),
+        en: document.getElementById('lang-en')
+    };
+
+    langButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const lang = btn.getAttribute('data-lang');
+
+            langButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            Object.keys(blocks).forEach(key => {
+                blocks[key].classList.toggle('active', key === lang);
+            });
+
+            // Cambia atributo lang del html para accesibilidad/SEO
+            document.documentElement.setAttribute('lang', lang === 'es' ? 'es' : 'en');
+        });
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
