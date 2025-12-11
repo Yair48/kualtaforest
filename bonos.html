@@ -6,7 +6,6 @@
     <title>Bonos de Carbono – CO₂KUALTA</title>
     <link rel="stylesheet" href="estilos.css">
 
-    <!-- Estilos específicos de esta página -->
     <style>
         body {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -55,7 +54,7 @@
         }
 
         .contenido {
-            max-width: 960px;
+            max-width: 1000px;
             margin: 0 auto 3rem;
             background: #ffffff;
             border-radius: 1.25rem;
@@ -69,8 +68,16 @@
             }
         }
 
-        h2, h3 {
+        h2, h3, h4 {
             color: #18412e;
+        }
+
+        .section-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #6a8572;
+            margin-bottom: 0.15rem;
         }
 
         .grid-2 {
@@ -113,10 +120,6 @@
             padding: 1.5rem 1.25rem;
             background: #f3f8f4;
             border: 1px solid #d5e7d7;
-        }
-
-        .pago-box h3 {
-            margin-top: 0;
         }
 
         .pago-badge {
@@ -167,6 +170,109 @@
             display: block;
         }
 
+        /* Compensación y donación */
+        .comp-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .comp-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        .comp-card {
+            border-radius: 1rem;
+            padding: 1.5rem 1.25rem;
+            background: #fbf8ee;
+            border: 1px solid #f0e1b5;
+        }
+
+        .pill {
+            display: inline-block;
+            padding: 0.2rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            background: #fff3cd;
+            color: #8a6d1d;
+            margin-bottom: 0.4rem;
+        }
+
+        .cta-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.55rem 1.1rem;
+            border-radius: 999px;
+            background: #25D366;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* Formulario */
+        .form-section {
+            margin-top: 2.5rem;
+            border-top: 1px solid #e1e9e2;
+            padding-top: 2rem;
+        }
+
+        .form-grid {
+            display: grid;
+            gap: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .form-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            font-size: 0.9rem;
+        }
+
+        .form-field label {
+            font-weight: 600;
+            color: #244a34;
+        }
+
+        .form-field input,
+        .form-field select,
+        .form-field textarea {
+            border-radius: 0.6rem;
+            border: 1px solid #cfded1;
+            padding: 0.5rem 0.65rem;
+            font: inherit;
+            resize: vertical;
+        }
+
+        .form-field textarea {
+            min-height: 90px;
+        }
+
+        .form-footnote {
+            font-size: 0.78rem;
+            color: #6b8572;
+            margin-top: 0.7rem;
+        }
+
+        .btn-submit {
+            margin-top: 1rem;
+            padding: 0.7rem 1.4rem;
+            border-radius: 999px;
+            border: none;
+            background: #18412e;
+            color: #ffffff;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
         footer {
             text-align: center;
             font-size: 0.8rem;
@@ -182,7 +288,6 @@
     <div class="logo-text">CO₂KUALTA</div>
     <p class="tagline">Desde la raíz, tejemos el futuro del planeta.</p>
 
-    <!-- Selector de idioma -->
     <div class="lang-switch">
         <button class="lang-btn active" data-lang="es">Español</button>
         <button class="lang-btn" data-lang="en">English</button>
@@ -191,8 +296,9 @@
 
 <main class="contenido">
 
-    <!-- BLOQUE EN ESPAÑOL -->
+    <!-- ================== ESPAÑOL ================== -->
     <section class="lang-block active" id="lang-es">
+        <div class="section-label">Servicio 1</div>
         <h2>Evaluación Técnica Inicial para Bonos de Carbono</h2>
 
         <div class="grid-2">
@@ -210,21 +316,14 @@
                     <li>Modelo de alianza sugerido (porcentaje para el propietario y para CO₂KUALTA).</li>
                     <li>Recomendaciones técnicas y ruta de siguiente paso.</li>
                 </ul>
+            </div>
 
+            <div>
                 <h3>¿Para quién es?</h3>
                 <ul>
                     <li>Propietarios de fincas o bosques en Colombia (mínimo 50–100 ha según el caso).</li>
                     <li>Familias o empresas que desean monetizar la conservación de su bosque.</li>
                     <li>Aliados internacionales interesados en proyectos serios y estructurados.</li>
-                </ul>
-            </div>
-
-            <div>
-                <h3>Resumen rápido</h3>
-                <ul>
-                    <li>Duración: 7 a 10 días hábiles.</li>
-                    <li>Entrega: informe ejecutivo + llamada de explicación.</li>
-                    <li>Formato: 100% virtual (podemos programar visita posterior si aplica).</li>
                 </ul>
                 <p class="small">
                     El valor de la evaluación se descuenta del costo de estructuración si avanzamos con el 
@@ -233,16 +332,16 @@
             </div>
         </div>
 
-        <!-- PAGOS -->
+        <!-- PAGOS EVALUACIÓN -->
         <section class="pago-section">
-            <h2>Confirma tu Evaluación</h2>
+            <h3>Confirma tu Evaluación</h3>
 
             <div class="pago-grid">
 
-                <!-- COLOMBIA / COP / WOMPI -->
+                <!-- COLOMBIA / WOMPI -->
                 <div class="pago-box">
                     <div class="pago-badge">Clientes en Colombia</div>
-                    <h3>Pago en pesos colombianos (COP)</h3>
+                    <h4>Pago en pesos colombianos (COP)</h4>
                     <p class="amount">COP 497.000</p>
                     <p class="small">
                         Ideal para propietarios de predios en Colombia que pagan desde cuentas bancarias o tarjetas locales.
@@ -257,16 +356,15 @@
                     </p>
                 </div>
 
-                <!-- INTERNACIONAL / USD / PAYPAL -->
+                <!-- INTERNACIONAL / PAYPAL -->
                 <div class="pago-box">
                     <div class="pago-badge">Clientes internacionales</div>
-                    <h3>Pago en dólares (USD)</h3>
-                    <p class="amount">USD (equivalente configurado en PayPal)</p>
+                    <h4>Pago en dólares (USD)</h4>
+                    <p class="amount">USD (valor configurado en PayPal)</p>
                     <p class="small">
                         Recomendado para propietarios o aliados que pagan desde Estados Unidos, Europa u otros países.
                     </p>
 
-                    <!-- Botón de PayPal que creaste -->
                     <div>
                       <style>.pp-ZCK67D7C3TZ6L{text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.25rem;cursor:pointer;}</style>
                       <form action="https://www.paypal.com/ncp/payment/ZCK67D7C3TZ6L" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
@@ -286,10 +384,143 @@
 
             </div>
         </section>
+
+        <!-- ========== SERVICIO 2: COMPENSAR / DONAR ========== -->
+        <div class="form-section">
+            <div class="section-label">Servicio 2</div>
+            <h2>Compensar tu Huella o Donar un Árbol</h2>
+
+            <div class="comp-grid">
+                <div class="comp-card">
+                    <span class="pill">Compensación de huella</span>
+                    <h3>Empresas y personas que quieren compensar</h3>
+                    <ul>
+                        <li>Compensas emisiones de viajes, eventos o consumo anual.</li>
+                        <li>Te conectamos con proyectos reales en territorio CO₂KUALTA.</li>
+                        <li>Recibes certificado digital de compensación.</li>
+                    </ul>
+                    <p class="small">
+                        Si quieres compensar una cantidad específica (por ejemplo, 10, 50 o 100 toneladas),
+                        deja tus datos en el formulario de abajo y te enviamos una propuesta a la medida.
+                    </p>
+                </div>
+
+                <div class="comp-card">
+                    <span class="pill">Servicio de menudeo</span>
+                    <h3>Dona un árbol</h3>
+                    <ul>
+                        <li>Pagas por la siembra y cuidado de árboles en zonas priorizadas.</li>
+                        <li>Puedes donar a tu nombre, de tu familia o de tu empresa.</li>
+                        <li>Recibes un mensaje con el lugar y el propósito de la siembra.</li>
+                    </ul>
+                    <p class="small">
+                        Muy pronto activaremos el botón de pago directo para donaciones.
+                        Mientras tanto, puedes escribirnos por WhatsApp o dejar tus datos
+                        en el formulario y te contactamos.
+                    </p>
+
+                    <a class="cta-whatsapp" href="https://wa.me/573116608217?text=Hola%20CO2KUALTA,%20quiero%20informaci%C3%B3n%20para%20compensar%20mi%20huella%20o%20donar%20un%20%C3%A1rbol." target="_blank">
+                        💬 Hablar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== FORMULARIO DE DIAGNÓSTICO ========== -->
+        <section class="form-section">
+            <div class="section-label">Formulario</div>
+            <h2>Diagnóstico Inicial del Predio / Proyecto</h2>
+            <p class="small">
+                Completa este formulario después de pagar tu evaluación o si deseas una propuesta
+                para compensar o donar árboles. Te contactaremos en máximo 1–2 días hábiles.
+            </p>
+
+            <!--
+              IMPORTANTE:
+              Actualmente el formulario envía la información por email usando FormSubmit.
+              Si cambias de correo, reemplaza co2kualta@sosing.com.co en el atributo "action".
+            -->
+            <form action="https://formsubmit.co/co2kualta@sosing.com.co" method="POST">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="Nuevo formulario CO2KUALTA - Bonos / Compensación">
+
+                <div class="form-grid">
+                    <div class="form-field">
+                        <label for="nombre">Nombre completo *</label>
+                        <input id="nombre" name="Nombre" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="email">Correo electrónico *</label>
+                        <input type="email" id="email" name="Email" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="whatsapp">WhatsApp / Teléfono *</label>
+                        <input id="whatsapp" name="WhatsApp" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="pais">País / Ciudad *</label>
+                        <input id="pais" name="País y ciudad" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="tipo-interes">¿Qué te interesa principalmente?</label>
+                        <select id="tipo-interes" name="Interés principal">
+                            <option value="Bonos de carbono">Bonos de carbono</option>
+                            <option value="Compensar huella">Compensar huella</option>
+                            <option value="Donar árboles">Donar árboles</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="superficie">
+                            Área aproximada del predio (ha) / Volumen a compensar (ton CO₂)
+                        </label>
+                        <input id="superficie" name="Área o volumen">
+                    </div>
+                </div>
+
+                <div class="form-field" style="margin-top:1rem;">
+                    <label for="cobertura">Tipo de cobertura / uso actual del suelo</label>
+                    <textarea id="cobertura" name="Cobertura y uso actual"
+                        placeholder="Bosque natural, plantación forestal, agroforestal, potrero, etc."></textarea>
+                </div>
+
+                <div class="form-field">
+                    <label for="tenencia">Tenencia y situación legal del predio</label>
+                    <textarea id="tenencia" name="Tenencia"
+                        placeholder="Escrituras, sucesión, sociedad, arriendo, etc."></textarea>
+                </div>
+
+                <div class="form-field">
+                    <label for="objetivo">
+                        ¿Cuál es tu objetivo con este proyecto? (económico, ambiental, social)
+                    </label>
+                    <textarea id="objetivo" name="Objetivo"></textarea>
+                </div>
+
+                <div class="form-field">
+                    <label for="como-nos-conoce">¿Cómo conociste CO₂KUALTA?</label>
+                    <input id="como-nos-conoce" name="Cómo nos conoció"
+                        placeholder="Redes sociales, referido, evento, otro">
+                </div>
+
+                <button type="submit" class="btn-submit">Enviar formulario</button>
+
+                <p class="form-footnote">
+                    Al enviar este formulario autorizas a CO₂KUALTA a contactarte y usar esta información
+                    únicamente para fines de evaluación técnica y construcción de la propuesta.
+                </p>
+            </form>
+        </section>
     </section>
 
-    <!-- BLOQUE EN INGLÉS -->
+    <!-- ================== ENGLISH ================== -->
     <section class="lang-block" id="lang-en">
+        <div class="section-label">Service 1</div>
         <h2>Initial Technical Assessment – Carbon Credit Project</h2>
 
         <div class="grid-2">
@@ -307,21 +538,14 @@
                     <li>Suggested partnership model (revenue split between landowner and CO₂KUALTA).</li>
                     <li>Technical recommendations and next steps roadmap.</li>
                 </ul>
+            </div>
 
+            <div>
                 <h3>Who is this for?</h3>
                 <ul>
                     <li>Landowners in Colombia (usually 50–100+ ha, depending on the case).</li>
                     <li>Families or companies who want to monetize forest conservation.</li>
                     <li>International partners looking for serious, well-structured projects.</li>
-                </ul>
-            </div>
-
-            <div>
-                <h3>At a glance</h3>
-                <ul>
-                    <li>Timeline: 7–10 business days.</li>
-                    <li>Deliverable: executive report + online call to walk you through the results.</li>
-                    <li>Format: fully remote; on-site visit can be arranged later if required.</li>
                 </ul>
                 <p class="small">
                     The assessment fee is discounted from the structuring cost if we move forward 
@@ -330,16 +554,14 @@
             </div>
         </div>
 
-        <!-- PAYMENTS (ENGLISH TEXT) -->
+        <!-- PAYMENTS (EN) -->
         <section class="pago-section">
-            <h2>Confirm your Assessment</h2>
+            <h3>Confirm your Assessment</h3>
 
             <div class="pago-grid">
-
-                <!-- COLOMBIA / COP / WOMPI -->
                 <div class="pago-box">
                     <div class="pago-badge">Clients in Colombia</div>
-                    <h3>Payment in Colombian Pesos (COP)</h3>
+                    <h4>Payment in Colombian Pesos (COP)</h4>
                     <p class="amount">COP 497,000</p>
                     <p class="small">
                         Recommended for landowners paying from Colombian banks or local cards.
@@ -354,16 +576,14 @@
                     </p>
                 </div>
 
-                <!-- INTERNATIONAL / USD / PAYPAL -->
                 <div class="pago-box">
                     <div class="pago-badge">International clients</div>
-                    <h3>Payment in US Dollars (USD)</h3>
+                    <h4>Payment in US Dollars (USD)</h4>
                     <p class="amount">USD (as configured in PayPal)</p>
                     <p class="small">
                         Perfect for clients paying from the United States, Europe or any other country.
                     </p>
 
-                    <!-- Same PayPal button -->
                     <div>
                       <style>.pp-ZCK67D7C3TZ6L{text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.25rem;cursor:pointer;}</style>
                       <form action="https://www.paypal.com/ncp/payment/ZCK67D7C3TZ6L" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
@@ -380,8 +600,112 @@
                         Payment will be processed in USD. PayPal will handle any currency conversion.
                     </p>
                 </div>
-
             </div>
+        </section>
+
+        <!-- COMPENSATION / DONATION (EN SHORT VERSION) -->
+        <div class="form-section">
+            <div class="section-label">Service 2</div>
+            <h2>Offset your footprint or sponsor a tree</h2>
+
+            <div class="comp-grid">
+                <div class="comp-card">
+                    <span class="pill">Footprint offset</span>
+                    <h3>Companies & individuals</h3>
+                    <ul>
+                        <li>Offset emissions from travel, events or yearly footprint.</li>
+                        <li>We connect you with real CO₂KUALTA projects on the ground.</li>
+                        <li>You receive a digital offset certificate.</li>
+                    </ul>
+                    <p class="small">
+                        If you need to offset a specific amount (10, 50, 100+ tCO₂),
+                        fill out the form below and we will send you a tailored proposal.
+                    </p>
+                </div>
+
+                <div class="comp-card">
+                    <span class="pill">Retail service</span>
+                    <h3>Sponsor a tree</h3>
+                    <ul>
+                        <li>You pay for planting and caring for trees in priority areas.</li>
+                        <li>You can dedicate trees to yourself, your family or your company.</li>
+                        <li>You receive a message with the place and purpose of the planting.</li>
+                    </ul>
+                    <p class="small">
+                        Direct online payment for donations will be available soon.
+                        For now, contact us on WhatsApp or use the form below.
+                    </p>
+
+                    <a class="cta-whatsapp" href="https://wa.me/573116608217?text=Hi%20CO2KUALTA,%20I%20want%20information%20to%20offset%20my%20footprint%20or%20sponsor%20a%20tree." target="_blank">
+                        💬 WhatsApp us
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <section class="form-section">
+            <div class="section-label">Form</div>
+            <h2>Initial Project Questionnaire</h2>
+            <p class="small">
+                Please complete this form after paying for your assessment or if you need a proposal
+                for offsetting or sponsoring trees. We will contact you within 1–2 business days.
+            </p>
+
+            <form action="https://formsubmit.co/co2kualta@sosing.com.co" method="POST">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="New CO2KUALTA form - EN">
+
+                <div class="form-grid">
+                    <div class="form-field">
+                        <label for="name-en">Full name *</label>
+                        <input id="name-en" name="Name" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="email-en">Email *</label>
+                        <input type="email" id="email-en" name="Email" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="phone-en">WhatsApp / Phone *</label>
+                        <input id="phone-en" name="WhatsApp / Phone" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="country-en">Country / City *</label>
+                        <input id="country-en" name="Country & City" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="interest-en">Main interest</label>
+                        <select id="interest-en" name="Main interest">
+                            <option value="Carbon credits">Carbon credits</option>
+                            <option value="Offset footprint">Offset footprint</option>
+                            <option value="Sponsor trees">Sponsor trees</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="area-en">
+                            Approx. land area (ha) / volume to offset (tCO₂)
+                        </label>
+                        <input id="area-en" name="Area or volume">
+                    </div>
+                </div>
+
+                <div class="form-field" style="margin-top:1rem;">
+                    <label for="cover-en">Land cover / current use</label>
+                    <textarea id="cover-en" name="Cover & use"></textarea>
+                </div>
+
+                <div class="form-field">
+                    <label for="goal-en">Project goal</label>
+                    <textarea id="goal-en" name="Goal"></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Send form</button>
+            </form>
         </section>
     </section>
 
@@ -391,7 +715,6 @@
     CO₂KUALTA &copy; <span id="year"></span>. Todos los derechos reservados.
 </footer>
 
-<!-- Script para cambio de idioma y año dinámico -->
 <script>
     const langButtons = document.querySelectorAll('.lang-btn');
     const blocks = {
@@ -410,7 +733,6 @@
                 blocks[key].classList.toggle('active', key === lang);
             });
 
-            // Cambia atributo lang del html para accesibilidad/SEO
             document.documentElement.setAttribute('lang', lang === 'es' ? 'es' : 'en');
         });
     });
